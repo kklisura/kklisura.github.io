@@ -17,7 +17,7 @@ author: Kenan Klisura
 title: kklisura's Blog
 email: kklisura@hotmail.com
 description: > # this means to ignore newlines until "twitter_username:"
-  Documenting my learning experience
+  Personal blog
 
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "https://kklisura.com" # the base hostname & protocol for your site, e.g. http://example.com
@@ -41,5 +41,4 @@ exclude:
 # Minima theme navigation items https://github.com/jekyll/minima#customize-navigation-links
 header_pages:
   - tags.html
-  - archive.html
   - about.md

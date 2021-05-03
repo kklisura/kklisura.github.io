@@ -1,5 +1,54 @@
-@import "variables";
-@import "minima";
-@import "minima-overrides";
 
-@import "tags";
+html {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  font-size: 1.15em;
+}
+
+body {
+  max-width: -webkit-calc(60rem + 30px - (30px * 2));
+  max-width: calc(60rem + 30px - (30px * 2));
+  margin-right: auto;
+  margin-left: auto;
+  padding-right: 30px;
+  padding-left: 30px;
+}
+
+code {
+  font-style: italic;
+  font-family: monospace;
+}
+
+header nav a {
+  margin-right: 1rem;
+}
+
+h1.post-title {
+  margin-bottom: 0.5rem;
+}
+
+p.post-meta {
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
+
+  .tag {
+    margin-right: 0.5rem;
+  }
+}
+
+.svg-icon {
+  width: 16px;
+  height: 16px;
+  display: inline-block;
+  fill: #828282;
+  padding-right: 5px;
+  vertical-align: middle;
+}
+
+.contact-links {
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.contact-links a:first-of-type  {
+  margin-right: 0.75rem;
+}

@@ -1,7 +1,9 @@
-Personal blog at [kklisura.github.io and](kklisura.github.io) and [kklisura.com](kklisura.com).
+Personal blog at [kklisura.github.io](https://kklisura.github.io) and and [kklisura.com](https://kklisura.com).
 
-## Serving locally
+## Writing locally
 
-```
+Run the following to start jekyll locally and to serve drafts articles:
+
+```sh
 jekyll serve --drafts
 ```
