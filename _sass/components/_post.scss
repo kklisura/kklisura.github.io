@@ -1,0 +1,93 @@
+@use "variables";
+
+.post {
+  h1 {
+    margin-top: 1rem;
+    margin-bottom: 0.5rem;
+    font-weight: 500;
+  }
+
+  h2, h3, h4, h5, h6 {
+    margin: 0;
+    margin-bottom: 1rem;
+    font-weight: 500;
+  }
+
+  blockquote {
+    font-style: italic;
+    background-color: variables.$post-quote-background-color;
+    border-left: 5px solid variables.$post-quote-left-border-color;
+    text-indent: 1rem;
+    margin-inline-start: 0;
+    margin-inline-end: 0;
+
+    & p {
+      padding: 1rem 0;
+    }
+  }
+
+  pre {
+    padding: 8px 12px;
+    overflow-x: auto;
+  
+    > code {
+      border: 0;
+      padding-right: 0;
+      padding-left: 0;
+    }
+  }
+
+  table {
+    margin-bottom: 1.5rem;
+    width: 100%;
+    text-align: left;
+    color: rgb(62.9, 62.9, 62.9);
+    border-collapse: collapse;
+    border: 1px solid #e8e8e8;
+   
+    & th {
+      padding: 0.25rem 1rem;
+      background-color: rgb(239.65, 239.65, 239.65);
+      border: 1px solid rgb(221.8, 221.8, 221.8);
+      border-bottom-color: rgb(201.4, 201.4, 201.4);
+    }
+
+    & td {
+      padding: 0.25rem 1rem;
+      border: 1px solid #e8e8e8;
+    }
+  }
+}
+
+.post-title {
+  font-size: 2rem;
+  line-height: 2rem;
+}
+
+.post-meta {
+  color: variables.$post-meta-color;
+  font-style: italic;
+  margin: 0;
+}
+
+.post-list-heading {}
+
+.post-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+
+  > li {
+    margin-bottom: 1.75rem;
+
+    > h3 {
+      font-weight: 500;
+      margin: 0;
+      margin-bottom: 0.25rem;
+    }
+
+    > p {
+      margin: 0;
+    }
+  }
+}

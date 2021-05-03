@@ -1,0 +1,24 @@
+
+@use "variables";
+
+.breadcrumbs {
+  margin: 1rem 0;
+  color: variables.$breadcrumbs-inactive-color;
+}
+
+.breadcrumbs__items {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.breadcrumbs__item {
+  display: inline;
+}
+
+.breadcrumbs__item--separator {
+  padding-left: 0.25rem;
+  padding-right: 0.25rem;
+}
+
+.breadcrumbs__item--active {}

@@ -1,5 +1,8 @@
-@import "variables";
-@import "minima";
-@import "minima-overrides";
+@use "normalize";
+@use "highlight";
 
-@import "tags";
+@use "base";
+@use "components/header";
+@use "components/footer";
+@use "components/post";
+@use "components/breadcrumbs";

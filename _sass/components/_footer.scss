@@ -1,0 +1,14 @@
+@use "variables";
+
+.footer {
+  margin-top: 1.5rem;
+  margin-bottom: 1.5rem;
+  border-top: 1px solid variables.$footer-border-color;;
+  padding: 0.5rem 0;
+  color: variables.$footer-text-color;
+}
+
+.footer__description {
+  font-style: italic;
+  margin: 0;
+}

@@ -1,0 +1,5 @@
+# This contains configuration properties used for building production level blog
+
+# The css output should be compressed
+sass:
+  style: compressed

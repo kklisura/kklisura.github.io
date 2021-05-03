@@ -1,7 +1,5 @@
-Personal blog at [kklisura.github.io and](kklisura.github.io) and [kklisura.com](kklisura.com).
+bundle install
 
-## Serving locally
+JEKYLL_ENV=production bundle exec jekyll build
 
-```
-jekyll serve --drafts
-```
+bundle exec jekyll serve --drafts

@@ -1,0 +1,57 @@
+@use "variables";
+
+html {
+  font-family: variables.$font-family-base;
+  font-feature-settings: normal;
+  font-variation-settings: normal;
+  line-height: 1.5;
+}
+
+body {
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 500;
+}
+
+a {
+  color: variables.$link-color;
+  transition-duration: 75ms;
+  transition-property: color, background-color;
+  
+  &:hover {
+    background-color: variables.$link-hovered-background-color;
+    color: variables.$link-hovered-color;
+  }
+}
+
+.container {
+  margin: auto;
+  width: 100%;
+}
+
+@media only screen and (min-width: 640px) {
+  .container {
+    max-width: 640px;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .container {
+    max-width: 768px;
+  }
+}
+
+@media only screen and (min-width: 1024px) {
+  .container {
+    max-width: 1024px;
+  }
+}
+
+@media only screen and (min-width: 1280px) {
+  .container {
+    max-width: 1280px;
+  }
+}
