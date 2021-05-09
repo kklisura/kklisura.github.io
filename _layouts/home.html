@@ -15,15 +15,15 @@ layout: default
     <h2>{{ page.list_title }}</h2>
   {%- endif -%}
 
-  <ul>
+  <ul class="blog-post-list">
     {%- assign date_format = site.minima.date_format | default: "%b %-d, %Y" -%}
     {%- for post in posts -%}
-    <li>
-      <span>
-        {{ post.date | date: date_format }} - 
-        <a href="{{ post.url | relative_url }}">
-          {{ post.title | escape }}
-        </a>
+    <li class="blog-post-list__item">
+      <a class="post-link"" href="{{ post.url | relative_url }}">
+        {{ post.title | escape }}
+      </a>
+      <span class="post-publishing-time">
+        {{ post.date | date: date_format }}
       </span>
     </li>
     {%- endfor -%}

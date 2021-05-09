@@ -2,7 +2,6 @@
 layout: default
 ---
 <article itemscope itemtype="http://schema.org/BlogPosting">
-
   <header>
     <h1 class="post-title" itemprop="name headline">{{ page.title | escape }}</h1>
     <p class="post-meta">
@@ -21,6 +20,4 @@ layout: default
   <div itemprop="articleBody">
     {{ content }}
   </div>
-
-  <a class="u-url" href="{{ page.url | relative_url }}" hidden></a>
 </article>
