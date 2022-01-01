@@ -13,23 +13,37 @@
 # you will see them accessed via {{ site.title }}, {{ site.email }}, and so on.
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
+title: Kenan Klisura's Blog
 author: Kenan Klisura
-title: kklisura's Blog
 email: kklisura@hotmail.com
 description: > # this means to ignore newlines until "twitter_username:"
-  Personal blog
+  A personal blog
+show_excerpts: true # set to true to show excerpts on the homepage
 
-baseurl: "" # the subpath of your site, e.g. /blog
-url: "https://kklisura.com" # the base hostname & protocol for your site, e.g. http://example.com
 twitter_username: kklisura
 github_username:  kklisura
 
-# Build settings
-markdown: kramdown
+# Minima date format
+# refer to https://shopify.github.io/liquid/filters/date/ if you want to customize this
+minima:
+  date_format: "%b %-d, %Y"
+
+# Minima theme navigation items https://github.com/jekyll/minima#customize-navigation-links
+header_pages:
+  - blog.html
+  - tags.html
+  - about.md
+
 theme: minima
+
 plugins:
   - jekyll-feed
   - jekyll-seo-tag
+
+#url: "https://kklisura.com" # the base hostname & protocol for your site, e.g. http://example.com
+
+# Build settings
+markdown: kramdown
 
 exclude:
   - Gemfile
@@ -37,8 +51,3 @@ exclude:
   - LICENSE
   - README.md
   - CNAME
-
-# Minima theme navigation items https://github.com/jekyll/minima#customize-navigation-links
-header_pages:
-  - tags.html
-  - about.md
