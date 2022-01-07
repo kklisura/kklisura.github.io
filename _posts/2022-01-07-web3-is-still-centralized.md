@@ -31,6 +31,13 @@ Another parallel is BitTorrent, a peer-to-peer file sharing, where files are dis
 
 If, for whatever reason, μTorrent introduces content filtering and blocking, majority of users won't be able to access your content. Now, I'm not claiming if this is good or bad, since it's kind of questionable what kind of content you are providing so BitTorrent clients need to block it, but that is besides the point. The point is that high client centralization, diminishes the underlying decentralization and I think that it's inevitable that will happen to web3 services as well.
 
+If you think that won't be happening - think again - it's already happening in NFT world. Some NFTs, a non-fungible tokens backed by Ethereum, got banned on the [OpenSea](https://opensea.io/) marketplace, after getting stolen from their owners. A client blocked the content from the blockchain.
+
+> Digital marketplace OpenSea has banned the PHAYC and Phunky Ape Yacht Club (or PAYC) collections...
+>
+> -- [Two NFT copycats are fighting over which is the real fake Bored Ape Yacht Club](https://www.theverge.com/2021/12/30/22860010/bored-ape-yacht-club-payc-phayc-copycat-nft) (theverge.com)
+
+
 ## References
 
 [1] [StackOverflow Developer Survey 2020, Collaboration tools](https://insights.stackoverflow.com/survey/2020#technology-collaboration-tools-all-respondents) (stackoverflow.com)
