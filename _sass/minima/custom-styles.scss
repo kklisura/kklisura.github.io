@@ -116,29 +116,6 @@ code {
 }
 
 
-.social-media-list {
-  display: table;
-  margin: 0 auto;
-  li {
-    float: left;
-    margin: 5px 2.5rem 5px 0;
-    &:last-of-type { margin-right: 0 }
-    a {
-      display: block;
-      padding: $spacing-unit / 4;
-    }
-  }
-
-  li + li {
-    padding-top: 0;
-  }
-
-  .svg-icon {
-    transform: scale(1.5);
-  }
-}
-
-
 .orange {
   fill: #f66a0a;
 }
@@ -149,4 +126,35 @@ code {
 
 img + em { 
   display: block;
+}
+
+.me-external-links {
+  display: table;
+  margin: 0;
+
+  li {
+    float: left;
+    margin: 5px 0.5rem 5px 0;
+    list-style: none;
+    margin-left: 0;
+
+    &:last-of-type { margin-right: 0 }
+
+    a {
+      display: block;
+      padding: $spacing-unit / 4;
+
+      :hover {
+        fill: #2a7ae2;
+      }
+    }
+  }
+
+  li + li {
+    padding-top: 0;
+  }
+
+  .svg-icon {
+    transform: scale(1.5);
+  }
 }
