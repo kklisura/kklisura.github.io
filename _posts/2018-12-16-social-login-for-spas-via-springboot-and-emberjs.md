@@ -103,7 +103,7 @@ The following is a list of all APIs exposed by the backend:
 
 Here's how it all looks like from user perspective:
 
-<img src="{{ site.baseurl }}/assets/images/social-login-for-spas-via-springboot-and-emberjs/demo.gif" alt="Login flow" style="width: 800px;"/>
+<img src="/assets/images/social-login-for-spas-via-springboot-and-emberjs/demo.gif" alt="Login flow" style="width: 800px;"/>
 
 ## Conclusion
 
