@@ -39,8 +39,9 @@ theme: minima
 plugins:
   - jekyll-feed
   - jekyll-seo-tag
+  - jekyll-sitemap
 
-#url: "https://kklisura.com" # the base hostname & protocol for your site, e.g. http://example.com
+url: "https://kklisura.com"
 
 # Build settings
 markdown: kramdown
