@@ -1,6 +1,6 @@
 ---
 layout: post
-t528tle: 'Web3 is still centralized?'
+title: Web3 is still centralized?
 tags:
   - web3
   - blockchain

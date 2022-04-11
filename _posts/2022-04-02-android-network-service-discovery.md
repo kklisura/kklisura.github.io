@@ -1,6 +1,6 @@
 ---
 layout: post
-t528tle: 'Android network service discovery'
+title: Android network service discovery
 tags:
   - android
   - java

@@ -1,6 +1,6 @@
 ---
 layout: post
-title: 'Social login for SPAs via SpringBoot and Ember.js'
+title: Social login for SPAs via SpringBoot and Ember.js
 tags:
   - java
   - spring-boot
