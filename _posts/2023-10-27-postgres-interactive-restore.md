@@ -98,6 +98,18 @@ By editing the file above to just:
 
 ...and by using `--use-list` with the file path on next `pg_restore` command, you can restore just the items specified in the file! So in this case it's just `events` and `snapshots` table on `event_store` schema together with `event_store_delete` function.
 
+In summary:
+
+```sh
+# Generate list of entries - entries.txt
+pg_restore --list --verbose -h localhost -U postgres -d test_db pg_db_dump.tar.gz > entries.txt
+
+# Edit the entries.txt
+
+# Apply the entries
+pg_restore --verbose -h localhost -U postgres -d test_db pg_db_dump.tar.gz --use-list entries.txt
+```
+
 ## References
 
 [1] [https://git-scm.com/book/en/v2/Git-Tools-Rewriting-History](https://git-scm.com/book/en/v2/Git-Tools-Rewriting-History)
