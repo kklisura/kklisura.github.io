@@ -1,38 +1,23 @@
 ---
 layout: default
 ---
-<article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
+<nav aria-label="breadcrumb">
+  <ol class="breadcrumb">
+    <li class="breadcrumb-item"><a href="/">Blog Posts</a></li>
+    <li class="breadcrumb-item active" aria-current="page">{{ page.title | escape }}</li>
+  </ol>
+</nav>
 
-  <header class="post-header">
-    <h1 class="post-title p-name" itemprop="name headline">{{ page.title | escape }}</h1>
-    <div class="post-meta">
-      <time class="dt-published" datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished">
-        {%- assign date_format = site.minima.date_format | default: "%b %-d, %Y" -%}
-        {{ page.date | date: date_format }}
-      </time>
-      {%- if page.author -%}
-        • <span itemprop="author" itemscope itemtype="http://schema.org/Person"><span class="p-author h-card" itemprop="name">{{ page.author }}</span></span>
-      {%- endif -%}
-      {% if page.tags.size > 0 %}
-      <div class="post-tags">
-        {%- assign tags = page.tags | sort -%}
-        {%- for tag in tags -%}
-          <span class="post-tag">
-            <a href="/tags#{{ tag }}">#{{ tag }}</a>
-          </span>
-        {%- endfor -%}
-      </div>
-      {% endif %}
-    </div>
+<article>
+  <header>
+    <h2>{{ page.title | escape }}</h2>
+
+    {%- assign date_format = site.minima.date_format | default: "%b %-d, %Y" -%}
+
+    <p role="doc-subtitle" class="text-secondary">
+      <em>Published on {{ page.date | date: date_format }}</em>
+    </p>
   </header>
 
-  <div class="post-content e-content" itemprop="articleBody">
-    {{ content }}
-  </div>
-
-  {%- if site.disqus.shortname -%}
-    {%- include disqus_comments.html -%}
-  {%- endif -%}
-
-  <a class="u-url" href="{{ page.url | relative_url }}" hidden></a>
+  {{ content }}
 </article>

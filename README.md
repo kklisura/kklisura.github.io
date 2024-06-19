@@ -1,9 +1,18 @@
-Personal blog at [kklisura.github.io](https://kklisura.github.io) and and [kklisura.com](https://kklisura.com).
+# Blog at kklisura.com
 
-## Writing locally
+## Introduction
 
-Run the following to start jekyll locally and to serve drafts articles:
+This repo contains source for my blog at [kklisura.com](kklisura.com).
 
-```sh
-jekyll serve --drafts
-```
+## Prerequisites
+
+The following are required to build the site:
+
+ - ruby 3.3.1
+
+
+Use `rvm` on OSX to install specific version.
+
+## Setup Local Environment
+
+TBD

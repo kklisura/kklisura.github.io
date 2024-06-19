@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="{{ site.lang | default: "en-US" }}">
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="utf-8">
+    <title>{{ page.title }} - {{ site.title }}</title>
+    <link rel="stylesheet" href="{{ "/assets/css/main.css" | relative_url }}">
+  </head>
+  <body>
+    <main class="container">
+      <header>
+        <div class="row">
+          <div class="col">
+            <h1>{{ site.title }}</h1>
+          </div>
+
+          <div class="col d-flex align-items-end justify-content-end">
+            <ul class="nav nav-pills">
+              {%- for path in site.header_pages -%}
+                {%- assign current_page = site.pages | where: "path", path | first -%}
+
+                {%- assign active_class = "" -%}
+
+                {% if page.url == current_page.url %}
+                  {%- assign active_class = "active" -%}
+                {% endif %}
+
+                <li class="nav-item">
+                  <a class="nav-link {{ active_class }}" href="{{ current_page.url | relative_url }}">{{ current_page.title | escape }}</a>
+                </li>
+              {%- endfor -%}
+            </ul>
+          </div>
+        </div>
+
+        <p role="doc-subtitle">
+          <em>{{ site.sub-title }}</em>
+        </p>
+      </header>
+
+      {{ content }}
+    </main>
+  </body>
+</html>

@@ -35,7 +35,7 @@ If you think that won't be happening - think again - it's already happening in N
 
 > Digital marketplace OpenSea has banned the PHAYC and Phunky Ape Yacht Club (or PAYC) collections...
 >
-> -- [Two NFT copycats are fighting over which is the real fake Bored Ape Yacht Club](https://www.theverge.com/2021/12/30/22860010/bored-ape-yacht-club-payc-phayc-copycat-nft) (theverge.com)
+> [Two NFT copycats are fighting over which is the real fake Bored Ape Yacht Club](https://www.theverge.com/2021/12/30/22860010/bored-ape-yacht-club-payc-phayc-copycat-nft) (theverge.com)
 
 
 ## References
