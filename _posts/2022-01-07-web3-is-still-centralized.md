@@ -13,21 +13,16 @@ Let's start with future Twitter, a web3 twitter. Its database is a blockchain, s
 
 I draw parallel to some existing _systems_. The open-source can be considered _distributed_. You can use whatever version control and you can host your code anywhere, but the majority of open-source code and users is centralized. The majority of users use GitHub, either as collaboration tool or to host their own code. If you are banned from GitHub, good luck reaching out to developers.
 
-<p align="center">
-  <img src="/assets/images/web3-is-still-centralized/stackoverflow-developer-survey-2020.png" alt="StackOverflow Developer Survey 2020"/>
-  <em>StackOverflow Developer Survey 2020, 52,883 respondents [1]</em>
-</p>
-<p align="center">
-  <img src="/assets/images/web3-is-still-centralized/stackoverflow-developer-survey-2021.png" alt="StackOverflow Developer Survey 2021"/>
-  <em>StackOverflow Developer Survey 2021, 22,528 respondents [2]</em>
-</p>
+![StackOverflow Developer Survey 2020, 52,883 respondents](/assets/images/web3-is-still-centralized/stackoverflow-developer-survey-2020.png)
+*StackOverflow Developer Survey 2020, 52,883 respondents [^1]*
+
+![StackOverflow Developer Survey 2021, 22,528 respondents](/assets/images/web3-is-still-centralized/stackoverflow-developer-survey-2021.png)
+*StackOverflow Developer Survey 2021, 22,528 respondents [^2]*
 
 Another parallel is BitTorrent, a peer-to-peer file sharing, where files are distributed and decentralized. Majority of users use μTorrent.
 
-<p align="center">
-  <img src="/assets/images/web3-is-still-centralized/bittorrent-client-market-share-wikipedia.png" alt="StackOverflow Developer Survey 2021"/>
-  <em>Usage share of BitTorrent clients, Wikipedia [3][4]</em>
-</p>
+![Usage share of BitTorrent clients, Wikipedia](/assets/images/web3-is-still-centralized/bittorrent-client-market-share-wikipedia.png)
+*Usage share of BitTorrent clients, Wikipedia [^3] [^4]*
 
 If, for whatever reason, μTorrent introduces content filtering and blocking, majority of users won't be able to access your content. Now, I'm not claiming if this is good or bad, since it's kind of questionable what kind of content you are providing so BitTorrent clients need to block it, but that is besides the point. The point is that high client centralization, diminishes the underlying decentralization and I think that it's inevitable that will happen to web3 services as well.
 
@@ -40,10 +35,10 @@ If you think that won't be happening - think again - it's already happening in N
 
 ## References
 
-[1] [StackOverflow Developer Survey 2020, Collaboration tools](https://insights.stackoverflow.com/survey/2020#technology-collaboration-tools-all-respondents) (stackoverflow.com)
+[^1]: [StackOverflow Developer Survey 2020, Collaboration tools](https://insights.stackoverflow.com/survey/2020#technology-collaboration-tools-all-respondents) (stackoverflow.com)
 
-[2] [StackOverflow Developer Survey 2020, Other communities public or private](https://insights.stackoverflow.com/survey/2021#stack-overflow-community-now-new-other-comms-names-other) (stackoverflow.com)
+[^2]: [StackOverflow Developer Survey 2020, Other communities public or private](https://insights.stackoverflow.com/survey/2021#stack-overflow-community-now-new-other-comms-names-other) (stackoverflow.com)
 
-[3] [Usage share of BitTorrent clients](https://en.wikipedia.org/wiki/Usage_share_of_BitTorrent_clients#2020) (wikipedia.org)
+[^3]: [Usage share of BitTorrent clients](https://en.wikipedia.org/wiki/Usage_share_of_BitTorrent_clients#2020) (wikipedia.org)
 
-[4] [uTorrent is the Most Used BitTorrent Client By Far](https://torrentfreak.com/utorrent-is-the-most-used-bittorrent-client-by-far-200405/) (torrentfreak.com)
+[^4]: [uTorrent is the Most Used BitTorrent Client By Far](https://torrentfreak.com/utorrent-is-the-most-used-bittorrent-client-by-far-200405/) (torrentfreak.com)

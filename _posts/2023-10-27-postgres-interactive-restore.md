@@ -7,7 +7,7 @@ tags:
 
 If you have used git interactive rebase, you know you can specify how rebase is done by picking specific commits, skipping, editing, etc. by merely editing a file in editor (most likely vim). Well `pg_restore` has _similar_ feature.
 
-_git rebase -i HEAD~3 [1]_
+_git rebase -i HEAD~3_ [^1]
 ```text
 pick f7f3f6d Change my name a bit
 pick 310154e Update README formatting and add blame
@@ -42,7 +42,7 @@ pick a5f4a0d Add cat-file
 
 I had a PG DB dump just the other day and I needed to apply it to my database, but I need to apply only specific changes (tables, constraints, functions, etc). I've had that before and I've used `--table`, `--schema` or `--trigger` where you can specify by name what you want to restore. I've now discovered that `pg_restore` has better option, an _interactive_ option similar to git interactive rebase.
 
-By specifying `--list` argument for `pg_restore` [2], a file gets created instead of restoring database. That file contains a list of actions to be performed during restore. An example file:
+By specifying `--list` argument for `pg_restore` [^2], a file gets created instead of restoring database. That file contains a list of actions to be performed during restore. An example file:
 
 ```text
 ;
@@ -112,6 +112,6 @@ pg_restore --verbose -h localhost -U postgres -d test_db pg_db_dump.tar.gz --use
 
 ## References
 
-[1] [https://git-scm.com/book/en/v2/Git-Tools-Rewriting-History](https://git-scm.com/book/en/v2/Git-Tools-Rewriting-History)
+[^1]: [https://git-scm.com/book/en/v2/Git-Tools-Rewriting-History](https://git-scm.com/book/en/v2/Git-Tools-Rewriting-History)
 
-[2] [https://www.postgresql.org/docs/current/app-pgrestore.html](https://www.postgresql.org/docs/current/app-pgrestore.html)
+[^2]: [https://www.postgresql.org/docs/current/app-pgrestore.html](https://www.postgresql.org/docs/current/app-pgrestore.html)

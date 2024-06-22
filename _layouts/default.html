@@ -8,13 +8,17 @@
   </head>
   <body>
     <main class="container">
-      <header>
+      <header class="pb-3 pb-md-0">
         <div class="row">
           <div class="col">
             <h1>{{ site.title }}</h1>
           </div>
 
-          <div class="col d-flex align-items-end justify-content-end">
+          <p role="doc-subtitle" class="d-md-none">
+            <em>{{ site.sub-title }}</em>
+          </p>
+
+          <div class="col d-md-flex align-items-end justify-content-end">
             <ul class="nav nav-pills">
               {%- for path in site.header_pages -%}
                 {%- assign current_page = site.pages | where: "path", path | first -%}
@@ -33,12 +37,22 @@
           </div>
         </div>
 
-        <p role="doc-subtitle">
+        <p role="doc-subtitle" class="d-none d-md-block">
           <em>{{ site.sub-title }}</em>
         </p>
       </header>
 
       {{ content }}
     </main>
+
+    <footer class="container">
+      <hr class="border border-dark-subtle opacity-50">
+
+      <p>
+        <em>
+          by Kenan Klisura
+        </em>
+      </p>
+    </footer>
   </body>
 </html>
