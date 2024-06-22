@@ -10,9 +10,10 @@ The following are required to build the site:
 
  - ruby 3.3.1
 
-
 Use `rvm` on OSX to install specific version.
 
-## Setup Local Environment
+## Local Development
 
-TBD
+```sh
+jekyll serve --drafts --livereload
+```

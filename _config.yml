@@ -6,6 +6,7 @@ sub-title: Collection of my thoughts on various different things
 
 header_pages:
   - posts.html
+  - links.md
   - about.md
 
 exclude:
