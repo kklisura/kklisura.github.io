@@ -7,51 +7,40 @@
     <link rel="stylesheet" href="{{ "/assets/css/main.css" | relative_url }}">
   </head>
   <body>
-    <main class="container">
-      <header class="pb-3 pb-md-0">
-        <div class="row">
-          <div class="col">
-            <h1>{{ site.title }}</h1>
-          </div>
+    <header class="container mx-auto mb-2 flex justify-between">
+      <div class="flex items-center border-b border-navbar-border">
+        <h1 class="text-2xl">{{ site.title }}</h1>
+      </div>
 
-          <p role="doc-subtitle" class="d-md-none">
-            <em>{{ site.sub-title }}</em>
-          </p>
+      <div class="flex-1 border-b border-navbar-border"></div>
 
-          <div class="col d-md-flex align-items-end justify-content-end">
-            <ul class="nav nav-pills">
-              {%- for path in site.header_pages -%}
-                {%- assign current_page = site.pages | where: "path", path | first -%}
+      <nav class="flex">
+        {%- for path in site.header_pages -%}
+          {%- assign current_page = site.pages | where: "path", path | first -%}
 
-                {%- assign active_class = "" -%}
+          {% if page.url == current_page.url %}
+            <div class="inline-block border-b-2 text-active-navbar-link-text border-active-navbar-link-border bg-active-navbar-link-bg hover:text-active-hovered-navbar-link-text hover:border-active-hovered-navbar-link-border hover:bg-active-hovered-navbar-link-bg">
+              <a class="block px-4 py-4 font-semibold" href="{{ current_page.url | relative_url }}">{{ current_page.title | escape }}</a>
+            </div>
+          {% else %}
+            <div class="inline-block border-b-2 transition-colors duration-200 text-navbar-link-text bg-navbar-link-bg border-navbar-link-border hover:text-hovered-navbar-link-text hover:bg-hovered-navbar-link-bg hover:border-hovered-navbar-link-border">
+              <a class="block px-4 py-4" href="{{ current_page.url | relative_url }}">{{ current_page.title | escape }}</a>
+            </div>
+          {% endif %}
+        {%- endfor -%}
+      </nav>
+    </header>
 
-                {% if page.url == current_page.url %}
-                  {%- assign active_class = "active" -%}
-                {% endif %}
-
-                <li class="nav-item">
-                  <a class="nav-link {{ active_class }}" href="{{ current_page.url | relative_url }}">{{ current_page.title | escape }}</a>
-                </li>
-              {%- endfor -%}
-            </ul>
-          </div>
-        </div>
-
-        <p role="doc-subtitle" class="d-none d-md-block">
-          <em>{{ site.sub-title }}</em>
-        </p>
-      </header>
-
+    <main class="container mx-auto mb-6">
       {{ content }}
     </main>
 
-    <footer class="container">
-      <hr class="border border-dark-subtle opacity-50">
-
-      <p>
-        <em>
-          by Kenan Klisura
-        </em>
+    <footer class="container mx-auto py-2 border-t border-navbar-border text-text-light">
+      <p class="italic">
+        Copyright 2024-{{ 'now' | date: "%Y" }} by Kenan Klisura. Any and all opinions expressed here are my own and not representative of any of my employers, past, future, and/or present.
+      </p>
+      <p class="italic">
+        Built with <a class="underline text-link-text bg-link-bg hover:text-hovered-link-text hover:bg-hovered-link-bg" href="https://jekyllrb.com/" target="_blank">Jekyll</a>, served via <a class="underline text-link-text bg-link-bg hover:text-hovered-link-text hover:bg-hovered-link-bg" target="_blank" href="https://pages.github.com/">Github Pages</a>, source code available at <a href="https://github.com/kklisura/kklisura.github.io" target="_blank" class="underline text-link-text bg-link-bg hover:text-hovered-link-text hover:bg-hovered-link-bg">Github</a>.
       </p>
     </footer>
   </body>

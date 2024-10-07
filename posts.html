@@ -4,15 +4,26 @@ title: Blog Posts
 permalink: /
 ---
 
-<h2>Blog Posts</h2>
+<header class="my-4">
+  <h2 class="font-medium text-2xl">Blog Posts</h2>
+</header>
 
 {%- assign date_format = site.minima.date_format | default: "%b %-d, %Y" -%}
-{%- for post in site.posts -%}
-<div>
-  <em class="small text-secondary">{{ post.date | date: date_format }}</em>
-  <a href="{{ post.url | relative_url }}" class="d-flex w-100 justify-content-between link-underline-opacity-0">
-    <h5 class="mb-1">{{ post.title | escape }}</h5>
-  </a>
-  <small>{{ post.excerpt }}</small>
-</div>
-{%- endfor -%}
+
+<dl>
+  {%- for post in site.posts -%}
+  <div class="mb-4">
+    <dt class="text-sm italic text-text-light">
+      {{ post.date | date: date_format }}
+    </dt>
+    <dt class="mb-1 text-xl">
+      <a href="{{ post.url | relative_url }}" class="underline text-link-text bg-link-bg hover:text-hovered-link-text hover:bg-hovered-link-bg">
+        {{ post.title | escape }}
+      </a>
+    </dt>
+    <dd class="text-text-body">
+      {{ post.excerpt }}
+    </dd>
+  </div>
+  {%- endfor -%}
+</dl>
