@@ -1,23 +1,26 @@
 ---
 layout: default
 ---
-<nav aria-label="breadcrumb">
-  <ol class="breadcrumb">
-    <li class="breadcrumb-item"><a href="/">Blog Posts</a></li>
-    <li class="breadcrumb-item active" aria-current="page">{{ page.title | escape }}</li>
+<nav aria-label="breadcrumb" class="my-4">
+  <ol class="bg">
+    <li class="inline"><a class="underline text-link-text bg-link-bg hover:text-hovered-link-text hover:bg-hovered-link-bg" href="/">Blog Posts</a></li>
+    <li class="inline px-1 text-text-light">/</li>
+    <li class="inline text-text-light" aria-current="page">{{ page.title | escape }}</li>
   </ol>
 </nav>
 
-<article>
-  <header>
-    <h2>{{ page.title | escape }}</h2>
+<article class="text-text-body">
+  <header class="mb-4">
+    <h2 class="font-medium text-2xl">{{ page.title | escape }}</h2>
 
     {%- assign date_format = site.minima.date_format | default: "%b %-d, %Y" -%}
 
-    <p role="doc-subtitle" class="text-secondary">
-      <em>Published on {{ page.date | date: date_format }}</em>
+    <p role="doc-subtitle" class="text-text-light italic">
+      Published on {{ page.date | date: date_format }}
     </p>
   </header>
 
-  {{ content }}
+  <div class="generated-markdown-content">
+    {{ content }}
+  </div>
 </article>
