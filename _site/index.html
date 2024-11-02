@@ -1,0 +1,26 @@
+---
+layout: default
+title: Blog Posts
+---
+
+<header class="my-4">
+  <h2 class="font-medium text-2xl">Blog Posts</h2>
+</header>
+
+<dl>
+  {{#each site.posts }}
+  <div class="mb-4">
+    <dt class="text-sm italic text-text-light">
+      {{ date }}
+    </dt>
+    <dt class="mb-1 text-xl">
+      <a href="{{ relativePath }}" class="underline text-link-text bg-link-bg hover:text-hovered-link-text hover:bg-hovered-link-bg">
+        {{ title }}
+      </a>
+    </dt>
+    <dd class="text-text-body">
+      {{{ excerpt }}}
+    </dd>
+  </div>
+  {{/each}}
+</dl>

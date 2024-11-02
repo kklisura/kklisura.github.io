@@ -1,10 +1,10 @@
 <!DOCTYPE html>
-<html lang="{{ site.lang | default: "en-US" }}">
+<html lang="{{ site.lang }}">
   <head>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta charset="utf-8">
     <title>{{ page.title }} - {{ site.title }}</title>
-    <link rel="stylesheet" href="{{ "/assets/css/main.css" | relative_url }}">
+     <link rel="stylesheet" href="https://kklisura.com/assets/css/main.css">
   </head>
   <body>
     <header class="container mx-auto mb-2 flex justify-between">
@@ -15,29 +15,27 @@
       <div class="flex-1 border-b border-navbar-border"></div>
 
       <nav class="flex">
-        {%- for path in site.header_pages -%}
-          {%- assign current_page = site.pages | where: "path", path | first -%}
-
-          {% if page.url == current_page.url %}
+        {{#each site.headerPages }}
+          {{#if isActive }}
             <div class="inline-block border-b-2 text-active-navbar-link-text border-active-navbar-link-border bg-active-navbar-link-bg hover:text-active-hovered-navbar-link-text hover:border-active-hovered-navbar-link-border hover:bg-active-hovered-navbar-link-bg">
-              <a class="block px-4 py-4 font-semibold" href="{{ current_page.url | relative_url }}">{{ current_page.title | escape }}</a>
+              <a class="block px-4 py-4 font-semibold" href="{{ relativePath }}">{{ title }}</a>
             </div>
-          {% else %}
+          {{ else }}
             <div class="inline-block border-b-2 transition-colors duration-200 text-navbar-link-text bg-navbar-link-bg border-navbar-link-border hover:text-hovered-navbar-link-text hover:bg-hovered-navbar-link-bg hover:border-hovered-navbar-link-border">
-              <a class="block px-4 py-4" href="{{ current_page.url | relative_url }}">{{ current_page.title | escape }}</a>
+              <a class="block px-4 py-4" href="{{ relativePath }}">{{ title }}</a>
             </div>
-          {% endif %}
-        {%- endfor -%}
+          {{/if}}
+        {{/each}}
       </nav>
     </header>
 
     <main class="container mx-auto mb-6">
-      {{ content }}
+      {{{ content }}}
     </main>
 
     <footer class="container mx-auto py-2 border-t border-navbar-border text-text-light">
       <p class="italic">
-        Copyright 2024-{{ 'now' | date: "%Y" }} by Kenan Klisura. Any and all opinions expressed here are my own and not representative of any of my employers, past, future, and/or present.
+        Copyright 2024-{{formatted-date 'now' "YYYY" }} by Kenan Klisura. Any and all opinions expressed here are my own and not representative of any of my employers, past, future, and/or present.
       </p>
       <p class="italic">
         Built with <a class="underline text-link-text bg-link-bg hover:text-hovered-link-text hover:bg-hovered-link-bg" href="https://jekyllrb.com/" target="_blank">Jekyll</a>, served via <a class="underline text-link-text bg-link-bg hover:text-hovered-link-text hover:bg-hovered-link-bg" target="_blank" href="https://pages.github.com/">Github Pages</a>, source code available at <a href="https://github.com/kklisura/kklisura.github.io" target="_blank" class="underline text-link-text bg-link-bg hover:text-hovered-link-text hover:bg-hovered-link-bg">Github</a>.

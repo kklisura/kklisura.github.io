@@ -5,22 +5,20 @@ layout: default
   <ol class="bg">
     <li class="inline"><a class="underline text-link-text bg-link-bg hover:text-hovered-link-text hover:bg-hovered-link-bg" href="/">Blog Posts</a></li>
     <li class="inline px-1 text-text-light">/</li>
-    <li class="inline text-text-light" aria-current="page">{{ page.title | escape }}</li>
+    <li class="inline text-text-light" aria-current="page">{{ page.title }}</li>
   </ol>
 </nav>
 
 <article class="text-text-body">
   <header class="mb-4">
-    <h2 class="font-medium text-2xl">{{ page.title | escape }}</h2>
-
-    {%- assign date_format = site.minima.date_format | default: "%b %-d, %Y" -%}
+    <h2 class="font-medium text-2xl">{{ page.title }}</h2>
 
     <p role="doc-subtitle" class="text-text-light italic">
-      Published on {{ page.date | date: date_format }}
+      Published on {{formatted-date page.date "MMM DD, YYYY" }}
     </p>
   </header>
 
   <div class="generated-markdown-content">
-    {{ content }}
+    {{{ content }}}
   </div>
 </article>

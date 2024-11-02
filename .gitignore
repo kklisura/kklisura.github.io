@@ -1,8 +1,5 @@
-_site
+_dist/
+_tmp/
+node_modules/
 .DS_Store
-.jekyll
-.jekyll-metadata
-.bundle
-.sass-cache
-node_modules
-package.json
+test.js

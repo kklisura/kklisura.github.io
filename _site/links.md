@@ -1,7 +1,6 @@
 ---
 layout: page
 title: Links
-permalink: /links
 ---
 
 The following is a list of authors/blogs/videos that I read/watch and often return to:
