@@ -1,0 +1,16 @@
+{{#if posts.length}}
+<table class="post-table">
+  <tbody>
+    {{#each posts}}
+    <tr>
+      <td class="post-list-date"><span>{{dateDisplay}}</span></td>
+      <td class="post-list-title">
+        <a href="{{url}}">{{title}}</a>{{#if isDraft}} <span class="draft-badge">draft</span>{{/if}}
+      </td>
+    </tr>
+    {{/each}}
+  </tbody>
+</table>
+{{else}}
+<p>No posts yet.</p>
+{{/if}}

@@ -1,0 +1,5 @@
+<nav class="site-nav">
+  {{#each nav}}
+  <a href="{{url}}" class="nav-link{{#if (eq url ../activeUrl)}} active{{/if}}">{{title}}</a>
+  {{/each}}
+</nav>
